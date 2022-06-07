@@ -1,209 +1,61 @@
-* {
+/*
+    Essas regras padrões são bacanas
+*/
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*
+    Aqui vamos começar a estilizar nosso header principal.
+    Temos um fundo preto, a cor do texto como branca, um
+    preenchimento pra ela não se limitar ao tamanho do texto
+    e a tornamos uma flexbox, que deixa nosso conteúdo mais 
+    flexível, ou seja, ele vai se comportar tanto como bloco
+    como linha. Depois justificamos o conteúdo para a direita
+    com nosso flex-end. O preenchimento padding é usado para
+    "engrossar" o header. Aqui também fornecemos um widht 
+    de 100% para que a largura seja de todo espaço visível
+    e por fim um position fixed para que a barra fique na mesma 
+    posição mesmo rolando a pagina
+*/
 
-/*Opacidade padrão*/
-
-.opacity {
-    opacity: 0.75;
-}
-
-.opacity1 {
-    opacity: 0.6;
-}
-
-
-/*Navbar*/
-
-.navbar {
+.main-header 
+{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    font-size: 15px;
-    letter-spacing: 4px;
-    box-shadow: 0px 1px 6px black;
+    justify-content: flex-end;
+    background-color: #000000;
+    color: #fff;
+    padding: 12px 16px;
+    font-family: Raleway;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+
+/*
+    Talvez essa seja a parte mais confusa da nossa esiilização.
+    Aqui temos a classe content que abriga as tags aside e a div 
+    principal do nosso conteúdo. Nossa organização é uma barra 
+    lateral ao conteúdo principal.
+*/
+
+.content{
     position: absolute;
-    width: 100%;
-    background-color: white;
 }
 
-.nav-logo {
-    padding: 8px 16px;
+aside{
+    height: 100%;
+    width: 200px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
-
-.nav-links ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav-item {
-    list-style: none;
-    margin: 0px 20px;
-}
-
-
-/*Corpo*/
-
-.content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-/*Banner*/
-
-.banner {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.banner-img {
-    height: auto;
-}
-
-.banner-item {
-    position: absolute;
-    width: 1550px;
-    align-self: flex-end;
-    justify-content: flex-start;
-    font-size: 50px;
-    margin: 10px;
-}
-
-
-/*About*/
-
-.about {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    padding: 70px 0;
-}
-
-.text-catering {
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
-    max-width: 450px;
-}
-
-.catering-title {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 100px;
-    letter-spacing: 3px;
-}
-
-.catering-subtitle {
-    text-align: center;
-    font-size: 20px;
-}
-
-.catering-info {
-    text-align: center;
-    margin-left: 10px;
-}
-
-.line {
-    display: flex;
-    justify-content: center;
-    border-top: 0.5px solid rgb(223, 223, 223);
-    margin: 20px 0;
-    width: 50%;
-}
-
-
-/*Menu*/
-
-.menu {
-    display: flex;
-    justify-content: center;
-    padding: 70px 0;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: center;
-    flex-flow: column wrap;
-    max-width: 450px;
-    margin-right: 100px;
-    font-size: 14px;
-}
-
-.menu-title {
-    text-align: center;
-    font-size: 45px;
-    margin-bottom: 50px;
-    letter-spacing: 3px;
-}
-
-.menu-item {
-    font-size: 20px;
-    font-weight: bolder;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
-}
-
-.menu-subitem {
-    opacity: 0.75;
-    color: #757575;
-    margin-bottom: 60px;
-}
-
-
-/*Contact*/
-
-.contact {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0 50px;
-    padding: 70px;
-}
-
-.contact-input {
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid #dedede;
-    width: 100%;
-}
-.message-submit{
-    padding: 10px;
-    text-align: center;
-    max-width: 150px;
-    margin-top: 20px;
-    border: none;
-}
-.contact-title{
-    text-align: left;
-    font-size: 40px;
-    margin-bottom: 100px;
-    letter-spacing: 3px;
-}
-.contact-subtitle{
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-.contact-item{
-    color: #9bbbc9;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/*Footer*/
-
-.page-footer{
-    display: flex;
-    width: 100%;
-    background-color: #dedede;
-    padding: 50px;
-    justify-content: center;
+.main{
+    margin-left: 0;
+    position: relative;
 }
