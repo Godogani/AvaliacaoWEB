@@ -36,14 +36,13 @@
     z-index: 3;
 }
 
-
 /*
-    Talvez essa seja a parte mais confusa da nossa esiilização.
-    Aqui temos a classe content que abriga as tags aside e a div 
-    principal do nosso conteúdo. Nossa organização é uma barra 
-    lateral ao conteúdo principal.
+    Aqui começamos a estilizar nossa side bar, para isso é aplicado
+    um position: fixed para que ela se mantenha na lateral conforme 
+    a página seja rolada. Depois, delimitamos sua largura, margin-top
+    e background-color para dar o tamanho, posição em relação ao header
+    e cor do plano de fundo
 */
-
 .aside {
     margin-top: 43px;
     height: 100%;
@@ -53,6 +52,15 @@
     background-color: #fff;
 }
 
+/*
+    Nessa classe começamos e estilizar o container do usuario, para isso
+    aplicamos a propriedade flex com o intuito de transformar os elementos
+    de bloco img e aside-profile-info em elementos de linha, feito isso 
+    definimos o justify-content como space-between para que nossos itens 
+    flex sejam dispostos opostamente em nosso aside-profile. Após, delimitamos 
+    um preenchimento e uma borda inferior de modo a espaçar e delimitar nosso 
+    conteúdo
+*/
 .aside-profile {
     display: flex;
     justify-content: space-between;
@@ -60,36 +68,74 @@
     border-bottom: 1px solid #f1f1f1;
 }
 
+/*
+    Com nosso seletor descendente img dentro de .aside-profile nós especificamos
+    como a imagem dentro de nosso aside-profile vai se comportar. Delimitamos
+    inicialmente uma largura fixa de 46 pixels, depois um border-radius de 100%
+    para tornar a imagem redonda e por fim aplicamos uma margem à esquerda para 
+    que não fique colada na lateral.
+*/
 .aside-profile img {
     width: 46px;
     border-radius: 100%;
     margin-left: 15px;
 }
 
+/*
+    Aqui nós aplicamos uma margem à direita de 100px por questão de estética, para
+    centralizar melhor nossa informações do perfil
+*/
 .aside-profile-info {
     margin-right: 100px;
 }
 
+/*
+    Nessa classe estilizamos a div que contém nosso fav-icons para que eles sejam 
+    reorganizados de modo que sejam igualmente espaçados e equidistantes da mensagem
+    de boas vindas. Para que isso ocorra tornamos os elementos de bloco em elementos
+    de linha com display:flex e os espaçamos com justify-content: space evenly. Para
+    a margin superior só usamos margin-top:10px
+*/
 .aside-profile-items {
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
 }
 
-aside h3 {
+/*
+    Usamos um seletor descendente em nosso aside *SOMENTE PORQUE É O ÚNICO H3 ALI*
+    para customizar nossa string "Dashboard", com isso damos um preenchimento a seu
+    espaço, similar a margem, depois aumentamos sua fonte com font-size e por fim
+    removemos seu efeito negritado com font-weight: normal
+*/
+.aside h3 {
     padding-left: 20px;
     font-size: 20px;
     font-weight: normal;
+    padding-top:20px;
 }
 
+/*
+    Aqui começa nossa navegação do dashboard, com isso aplicamos um padding vertical 
+    de 10px para que se distancie um pouco do dashboard
+*/
 .dashboard {
     padding: 10px 0;
 }
 
+/*
+    Para nossos itens na barra de navegação, fornecemos um preenchimento em todas direções
+    de 10px de modo a tornar suas caixas maiores e ao mesmo tempo mais espaçadas.
+*/
 .dashboard-item {
-    padding: 6px;
+    padding: 10px;
 }
 
+/*
+    Com nosso seletor descendente para as tags <a> contidas dentro dos itens do dashboard
+    removemos seus sublinhados, damos um preenchimento melhor e maior além de colorirmos 
+    elas de preto e aumentarmos o tamanho da fonte para 15px
+*/
 .dashboard-item a {
     padding: 8px 16px;
     text-decoration: none;
@@ -105,30 +151,35 @@ aside h3 {
 
 
 /*SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSIIIIIIUUUUUUUUUUUUUUU*/
-.status-bar{
+.status-bar {
     display: flex;
     justify-content: space-evenly;
 }
-.status{
+
+.status {
     width: 24%;
     padding: 16px 0;
     color: #fff;
 
 }
-.status-box{
+
+.status-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 12px;
 }
-.to-left{
+
+.to-left {
     font-size: 50px;
     text-align: left;
 }
-.to-right h3{
+
+.to-right h3 {
     font-size: 25px;
     font-weight: 100;
 }
+
 .box-red {
     background-color: #f44336;
 }
