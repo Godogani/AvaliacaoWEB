@@ -1,39 +1,42 @@
 /*
-    Essas regras padrões são bacanas
+    Essas regras padrões são bacanas pra começar, nos dando
+    liberdade para colocar as margens e preenchimentos como
+    quisermos além de nos dar uma gestão maior de posicionamento
+    com nossa regra box-sizing:border-box. Colocamos uma fonte
+    padrão para o site para padronizar todos os texto que 
+    aparecerem em nossa página
 */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Raleway;
 }
-
 
 /*
     Aqui vamos começar a estilizar nosso header principal.
     Temos um fundo preto, a cor do texto como branca, um
     preenchimento pra ela não se limitar ao tamanho do texto
-    e a tornamos uma flexbox, que deixa nosso conteúdo mais 
-    flexível, ou seja, ele vai se comportar tanto como bloco
-    como linha. Depois justificamos o conteúdo para a direita
-    com nosso flex-end. O preenchimento padding é usado para
-    "engrossar" o header. Aqui também fornecemos um widht 
-    de 100% para que a largura seja de todo espaço visível
-    e por fim um position fixed para que a barra fique na mesma 
-    posição mesmo rolando a pagina
+    alinhamos o título do header com text-align: right, com 
+    isso, o preenchimento padding é usado para "engrossar" o
+    header. Aqui também fornecemos um widht de 100% para que
+    a largura seja de todo espaço visívele por fim um position
+    fixed para que a barra fique na mesma posição mesmo rolando a pagina
 */
 
 .main-header {
-    display: flex;
-    justify-content: flex-end;
+    text-align: right;
     background-color: #000000;
     color: #fff;
-    padding: 12px 16px;
-    font-family: Raleway;
+    padding: 8px 16px;
     width: 100%;
     position: fixed;
     z-index: 3;
+}
+
+.main-header span {
+    font-size: 18px;
+    padding: 8px 16px;
 }
 
 /*
@@ -63,8 +66,7 @@
 */
 .aside-profile {
     display: flex;
-    justify-content: space-between;
-    padding: 25px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #f1f1f1;
 }
 
@@ -77,16 +79,23 @@
 */
 .aside-profile img {
     width: 46px;
+    height: 46px;
     border-radius: 100%;
     margin-left: 15px;
 }
 
+.aside-welcome {
+    width: 100%;
+    text-align: center;
+    padding: 8px 16px;
+}
+
 /*
-    Aqui nós aplicamos uma margem à direita de 100px por questão de estética, para
+    Aqui nós aplicamos uma margem à direita de 80px por questão de estética, para
     centralizar melhor nossa informações do perfil
 */
 .aside-profile-info {
-    margin-right: 100px;
+    margin-left: 15px;
 }
 
 /*
@@ -100,7 +109,11 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
+    width: 100%;
+    padding: 0 16px;
+    padding-bottom: 30px;
 }
+
 
 /*
     Usamos um seletor descendente em nosso aside *SOMENTE PORQUE É O ÚNICO H3 ALI*
@@ -112,7 +125,7 @@
     padding-left: 20px;
     font-size: 20px;
     font-weight: normal;
-    padding-top:20px;
+    padding-top: 30px;
 }
 
 /*
@@ -120,9 +133,12 @@
     de 10px para que se distancie um pouco do dashboard
 */
 .dashboard {
-    padding: 10px 0;
+    padding: 0;
 }
-
+.dashboard-links{
+    display: flex;
+    flex-direction: column;
+}
 /*
     Para nossos itens na barra de navegação, fornecemos um preenchimento em todas direções
     de 10px de modo a tornar suas caixas maiores e ao mesmo tempo mais espaçadas.
@@ -136,21 +152,31 @@
     removemos seus sublinhados, damos um preenchimento melhor e maior além de colorirmos 
     elas de preto e aumentarmos o tamanho da fonte para 15px
 */
-.dashboard-item a {
-    padding: 8px 16px;
+.dashboard-item{
+    padding: 8px 10px;
     text-decoration: none;
     color: #000;
     font-size: 15px;
+    width: 100%;
 }
 
+.dashboard-item:first-child {
+    background-color: #2196f3;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.dashboard-item:hover {
+    background-color: #ccc;
+    color: black;
+}
+/*DIVISOR DE ÁGUAS*/
 .main {
     margin-left: 300px;
     padding-top: 43px;
     background-color: #f1f1f1;
 }
 
-
-/*SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSIIIIIIUUUUUUUUUUUUUUU*/
 .status-bar {
     display: flex;
     justify-content: space-evenly;
