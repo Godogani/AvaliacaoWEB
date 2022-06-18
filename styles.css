@@ -15,6 +15,14 @@
 }
 
 /*
+    Padding para dar alinhamento. Vai ser usada nos casos posteriores
+    para corrigir mau alinhamento dos containeres e boxes.  
+*/
+.alignement {
+    padding-right: 15px;
+}
+
+/*
     Aqui vamos começar a estilizar nosso header principal.
     Temos um fundo preto, a cor do texto como branca, um
     preenchimento padding pra dar mais área pro cabeçalho,
@@ -112,17 +120,31 @@
     reorganizados de modo que sejam igualmente espaçados e equidistantes da mensagem
     de boas vindas. Para que isso ocorra tornamos os elementos de bloco em elementos
     de linha com display:flex e os espaçamos com justify-content: space evenly. Para
-    a margin superior só usamos margin-top:10px e delomitamos um preenchimento horizontal
-    de 16px.
+    a margin superior só usamos margin-top:10px e delimitamos um preenchimento inferior
+    de 20px.
 */
 .aside-profile-items {
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
-    padding: 0 16px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
+/*
+    Nessa regra apenas damos um preenchimento mais adequado para os nossos fav icons.
+*/
+.aside-profile-items i{
+    padding: 8px 16px;
+}
+
+/*
+    Nessa classe usamos pseudo-seletores para quando o mouse deslizar por cima dos fav icons
+    que o background mude de cor e o cursos se torne do tipo pointer.
+*/
+.aside-profile-items i:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
 
 /*
     Usamos um seletor descendente em nosso aside *SOMENTE PORQUE É O ÚNICO H3 ALI*
@@ -133,7 +155,7 @@
 .aside h3 {
     padding-left: 20px;
     font-size: 20px;
-    
+
     padding-top: 30px;
 }
 
@@ -260,7 +282,7 @@
 */
 .to-right h3 {
     font-size: 25px;
-    
+
 }
 
 /*
@@ -293,10 +315,12 @@
 
 
 /*
-    Aplicamos um display flex para que os itens se comportem como elementos de linha.
+    Aplicamos um display flex para que os itens se comportem como elementos de linha 
+    e um preenchimento à direita para alinhamento.
 */
 .region-feed {
     display: flex;
+    padding-right: 15px;
 }
 
 /*
@@ -313,7 +337,7 @@
     Começamos a estilizar nossa tabela usando border-collapse: collapse para que não haja
     bordas dividindo as linhas e colunas além de um widht:100% para abrigar toda largura.
 */
-.table{
+.table {
     border-collapse: collapse;
     width: 100%;
 }
@@ -322,14 +346,14 @@
     Aqui aplicamos um background branco para todas as colunas que sejam filhos ímpares
     da nossa classe row.
 */
-.row:nth-child(odd){
+.row:nth-child(odd) {
     background-color: #fff;
 }
 
 /*
     Nessa regra aumentamos a font-size de nossos textos, além de dar um preenchimento.
 */
-.table-text{
+.table-text {
     font-size: 18px;
     padding: 12px 16px;
 }
@@ -337,24 +361,27 @@
 /*
     Nas próximas regras estilizamos a cor do texto.
 */
-.text-red{
-    color:#f44336;
+.text-red {
+    color: #f44336;
 }
-.text-blue{
-    color:#2196f3;
+
+.text-blue {
+    color: #2196f3;
 }
-.text-yellow{
-    color:#ff9800;
+
+.text-yellow {
+    color: #ff9800;
 }
-.text-green{
-    color:#4CAF50;
+
+.text-green {
+    color: #4CAF50;
 }
 
 
 /*
     Aplicamos um preenchimento vertical para nosso título para fim de distanciamento.
 */
-.progress-title{
+.progress-title {
     padding: 20px 0;
 }
 
@@ -362,8 +389,8 @@
     Selecionamos nossa barra de progresso aplicando um fundo padrão e um width de 100%
     para que ocupe todo o espaço visual disponivel.
 */
-.progress-bar{
-    width:100%;
+.progress-bar {
+    width: 100%;
     background-color: #9E9E9E;
 }
 
@@ -372,7 +399,7 @@
     depois disso aplicamos um perenchimento vertical para dar mais volume, alinhamos o texto
     ao centro e por fim aplicamos a cor branca ao texto.
 */
-.percentage{
+.percentage {
     position: relative;
     padding: 10px 0;
     text-align: center;
@@ -383,25 +410,69 @@
     À seguir aplicamos as devidas colorações de fundo e porcentagens de cada elemento subsequente.
     Note que mudamos novamente a cor do texto para preto em progress-yellow.
 */
-.progress-green{
+.progress-green {
     width: 25%;
     background-color: #4CAF50;
 }
-.progress-yellow{
+
+.progress-yellow {
     width: 50%;
     background-color: #ff9800;
     color: #000;
 }
-.progress-red{
+
+.progress-red {
     width: 75%;
     background-color: #f44336;
 }
 
 
+/*
+    Criamos essa classe para atribuir borda na tabela dos países de modo que cada linha seja delimitada
+    por uma borda tal como o perímetro total.
+*/
+.border {
+    border: 1px solid #ccc !important
+}
 
+/*
+    Aqui criamos uma classe específica para quando o mouse passar por cima de alguma linha da tabela,
+    com isso o background-color muda para #ccc.
+*/
+.hover-grey:hover {
+    background-color: #ccc
+}
 
+/*
+    Aqui definimos um preenchimento em todas as direções de 10px para cada país dentro de nossa tabela.
+*/
+.country {
+    padding: 10px;
+}
 
+/*
+    Nessa clase estilizamos nosso botão, com isso definimos uma cor branca para seu texto interior,
+    bem como a ausencia de bordas com border: none. Definimos um novo fundo e um preenchimento já
+    utilizado em outras regras, também há a alteração do tamanho de seu texto e quando sobreposto
+    pelo mouse, seu cursor adquire a forma pointer.
+*/
+.country-button {
+    color: white;
+    border: none;
+    background-color: #616161;
+    padding: 8px 16px;
+    font-size: 15px;
+    cursor: pointer;
+}
 
+/*
+    Quando nosso botão sofrer hover, ele mudará seu texto pra preto com color e a sua cor de fundo
+    com a propriedade background-color.
+*/
+.country-button:hover {
+    color: black;
+    background-color: #ccc;
+}
 
 
 
@@ -456,7 +527,88 @@
     margin-left: -16px;
 }
 
+/*
+    Para começar, tornamos os componentes flex e permitimos flex-wrap, ou seja, nossos flex items
+    vão quebrar a linha quando o tamanho total não puder conter todos eles ao invés de os comprimir
+    depois adiconamos uma sombra à caixa usando box shadow onde temos nossos argumentos como: 
+    offset x, offset y, blur-radius e color.
+*/
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.226), 0 4px 20px rgba(0, 0, 0, 0.19);
+}
 
+/*
+    Para estilizar nosso user-box tornamos um display flex para centralizar o nome do
+    usuário com a foto de perfil. É aplicado um width de 100% para trabalhar junto com o 
+    flex-wrap de anteriormente, com isso cada usuário ocupa uma linha. Aqui aumentamos
+    também a fonte, usamos um preenchimento em todas direções de 16px, mudamos também
+    nosso background pra branco e aplicamos uma borda inferior em todos itens.
+*/
+.user-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 24px;
+    padding: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+/*
+    Nessa classe, arredondamos a imagem com border-radius: 100% e espaçamos o nome do
+    usuário de nossa imagem com margin-right.
+*/
+.user-box img {
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+/*
+    Tornamos o display flex para que os seus itens se comportem como linha e depois os
+    alinhamos ao centro vertical. O padding da um preenchimento vertical de 30px para
+    fins de espaçamento.
+*/
+.comment{
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+/*
+    Aqui arredondamos a imagem do comentario com border-radius: 100% e espaçamos
+    do comentário com margin-right: 64px.
+*/
+.comment img{
+    border-radius: 100%;
+    margin-right: 64px;
+}
+
+/*
+    Nessa classe damos um padding-bottom para espaçamento entre as informações 
+    date-time e nome do usuário com o comentário em si.
+*/
+.comment-content h4{
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+/*
+    Aqui reduzimos a opacidade para tornar o texto mais acinzentado e alteramos 
+    seu tamanho para 15px.
+*/
+.comment-date{
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+/*
+    Nessa classe só alteramos o tamanho do texto para 15px.
+*/
+.comment-content p{
+    font-size: 15px;
+}
 
 /*
     À PARTIR DAQUI TUDO É APLICADO COM SELEÇÃO DE TAG POIS É O ÚNICO LOCAL DA PÁGINA COM FOOTER.
