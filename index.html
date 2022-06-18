@@ -30,17 +30,35 @@
 
       <h3>Dashboard</h3>
 
-      <nav class="dashboard">
+      <nav>
         <div class="dashboard-links">
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-users"></i> Overview </a>
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-eye"></i> Views </a>
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-users"></i> Traffic </a>
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-bullseye"></i> Geo </a>
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-gem"></i> Orders </a>
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-bell"></i> News </a>
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-building-columns"></i> General </a>
-          <a href="#" class="dashboard-item"><i class="fa-solid fa-clock-rotate-left"></i> History</a>
-          <a href="#" class="dashboard-item"> <i class="fa-solid fa-gear"></i> Settings </a>
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-users"></i> Overview
+          </a>
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-eye"></i> Views
+          </a>
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-users"></i> Traffic
+          </a>
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-bullseye"></i> Geo
+          </a>
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-gem"></i> Orders
+          </a>
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-bell"></i> News
+          </a>
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-building-columns"></i> General
+          </a>
+          <a href="#" class="dashboard-item"
+            ><i class="fa-solid fa-clock-rotate-left"></i> History</a
+          >
+          <a href="#" class="dashboard-item">
+            <i class="fa-solid fa-gear"></i> Settings
+          </a>
         </div>
       </nav>
     </aside>
@@ -51,131 +69,138 @@
         <strong>My Dashboard</strong>
       </h3>
       <div class="status-bar">
-        <div class="status box-red">
+        <div class="status red">
           <div class="status-box">
             <div class="to-left"><i class="fa-solid fa-comment"></i></div>
             <div class="to-right">
               <h3>52</h3>
             </div>
           </div>
-          <h4>Messages</h4>
+          <h4 class="status-title">Messages</h4>
         </div>
-        <div class="status box-blue">
+        <div class="status blue">
           <div class="status-box">
             <div class="to-left"><i class="fa-solid fa-eye"></i></div>
             <div class="to-right">
               <h3>99</h3>
             </div>
           </div>
-          <h4>Views</h4>
+          <h4 class="status-title">Views</h4>
         </div>
-        <div class="status box-green">
+        <div class="status green">
           <div class="status-box">
             <div class="to-left"><i class="fa-solid fa-share-nodes"></i></div>
             <div class="to-right">
               <h3>23</h3>
             </div>
           </div>
-          <h4>Shares</h4>
+          <h4 class="status-title">Shares</h4>
         </div>
-        <div class="status box-yellow">
+        <div class="status yellow">
           <div class="status-box">
             <div class="to-left"><i class="fa-solid fa-users"></i></div>
             <div class="to-right">
               <h3>50</h3>
             </div>
           </div>
-          <h4>Users</h4>
+          <h4 class="status-title">Users</h4>
         </div>
       </div>
+
       <div class="region-feed">
         <div class="region">
           <h3>Regions</h3>
-          <img src="images/region.jpg" alt="" />
+          <img src="images/region.jpg" width="300px" height="auto" alt="" />
         </div>
-        <div class="Feeds">
+        <div class="feed">
           <h3>Feeds</h3>
-          <ul class="feed-grid">
-            <li class="feed-item">
-              <i class="fa-solid fa-user item-blue"></i>
-              <span class="about-feed">New record, over 90 views.</span>
-              <span class="feed-last-update">10 mins</span>
-            </li>
-            <li class="feed-item">
-              <i class="fa-solid fa-bell item-red"></i>
-              <span class="about-feed">Database error.</span>
-              <span class="feed-last-update">15 mins</span>
-            </li>
-            <li class="feed-item">
-              <i class="fa-solid fa-users item-yellow"></i>
-              <span class="about-feed">New record, over 40 users.</span>
-              <span class="feed-last-update">17 mins</span>
-            </li>
-            <li class="feed-item">
-              <i class="fa-solid fa-comment item-red"></i>
-              <span class="about-feed">New comments.</span>
-              <span class="feed-last-update">25 mins</span>
-            </li>
-            <li class="feed-item">
-              <i class="fa-solid fa-bookmark item-blue"></i>
-              <span class="about-feed">Check transaction.</span>
-              <span class="feed-last-update">28 mins</span>
-            </li>
-            <li class="feed-item">
-              <i class="fa-solid fa-laptop item-red"></i>
-              <span class="about-feed">CPU overload.</span>
-              <span class="feed-last-update">35 mins</span>
-            </li>
-            <li class="feed-item">
-              <i class="fa-solid fa-share-nodes item-green"></i>
-              <span class="about-feed">New shares.</span>
-              <span class="feed-last-update">39 mins</span>
-            </li>
-          </ul>
+          <div style="width: 100%">
+            <table class="table">
+              <tr class="row">
+                <td><i class="fa fa-user text-blue table-text"></i></td>
+                <td>New record, over 90 views.</td>
+                <td><i>10 mins</i></td>
+              </tr>
+              <tr class="row">
+                <td><i class="fa fa-bell text-red table-text"></i></td>
+                <td>Database error.</td>
+                <td><i>15 mins</i></td>
+              </tr>
+              <tr class="row">
+                <td><i class="fa fa-users text-yellow table-text"></i></td>
+                <td>New record, over 40 users.</td>
+                <td><i>17 mins</i></td>
+              </tr>
+              <tr class="row">
+                <td><i class="fa fa-comment text-red table-text"></i></td>
+                <td>New comments.</td>
+                <td><i>25 mins</i></td>
+              </tr>
+              <tr class="row">
+                <td><i class="fa fa-bookmark text-blue table-text"></i></td>
+                <td>Check transactions.</td>
+                <td><i>28 mins</i></td>
+              </tr>
+              <tr class="row">
+                <td><i class="fa fa-laptop text-red table-text"></i></td>
+                <td>CPU overload.</td>
+                <td><i>35 mins</i></td>
+              </tr>
+              <tr class="row">
+                <td><i class="fa fa-share-alt text-green table-text"></i></td>
+                <td>New shares.</td>
+                <td><i>39 mins</i></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
 
       <h3>General Stats</h3>
-      <h4>New Visitors</h4>
-      <span class="progress-bar">
-        <span class="percentage progress-green">25%</span>
-      </span>
-      <h4>New Users</h4>
-      <span class="progress-bar progress-yellow">
-        <span class="percentage">50%</span>
-      </span>
-      <h4>Bounce Rate</h4>
-      <span class="progress-bar progress-red">
-        <span class="percentage">75%</span>
-      </span>
+
+      <h4 class="progress-title">New Visitors</h4>
+      <div class="progress-bar">
+        <div class="percentage progress-green">25%</div>
+      </div>
+
+      <h4 class="progress-title">New Visitors</h4>
+      <div class="progress-bar">
+        <div class="percentage progress-yellow">50%</div>
+      </div>
+
+      <h4 class="progress-title">New Visitors</h4>
+      <div class="progress-bar">
+        <div class="percentage progress-red">75%</div>
+      </div>
 
       <h3>Countries</h3>
-      <ul class="country">
-        <li class="country-item">
-          <span class="country-name">United States</span>
-          <span class="country-percentage">65%</span>
-        </li>
-        <li class="country-item">
-          <span class="country-name">UK</span>
-          <span class="country-percentage">15.7%</span>
-        </li>
-        <li class="country-item">
-          <span class="country-name">Russia</span>
-          <span class="country-percentage">5.6%</span>
-        </li>
-        <li class="country-item">
-          <span class="country-name">Spain</span>
-          <span class="country-percentage">2.1%</span>
-        </li>
-        <li class="country-item">
-          <span class="country-name">India</span>
-          <span class="country-percentage">1.9%</span>
-        </li>
-        <li class="country-item">
-          <span class="country-name">France</span>
-          <span class="country-percentage">1.5%</span>
-        </li>
-      </ul>
+      <table class="table">
+        <tr class="row">
+          <td>United States</td>
+          <td>65%</td>
+        </tr>
+        <tr class="row">
+          <td>UK</td>
+          <td>15.7%</td>
+        </tr>
+        <tr class="row">
+          <td>Russia</td>
+          <td>5.6%</td>
+        </tr>
+        <tr class="row">
+          <td>Spain</td>
+          <td>2.1%</td>
+        </tr>
+        <tr class="row">
+          <td>India</td>
+          <td>1.9%</td>
+        </tr>
+        <tr class="row">
+          <td>France</td>
+          <td>1.5%</td>
+        </tr>
+      </table>
+      <br />
       <button class="country-button">
         More Countries<i class="fa-solid fa-arrow-right"></i>
       </button>
@@ -219,47 +244,37 @@
       </div>
       <div class="pre-footer">
         <div class="pre-footer-box">
-          <h3>Demografic</h3>
-          <span class="bar green"></span>
+          <h3 class="pre-footer demo">Demografic</h3>
           <ul>
-            <li>Language</li>
-            <li>Country</li>
-            <li>City</li>
+            <p>Language</p>
+            <p>Country</p>
+            <p>City</p>
           </ul>
         </div>
         <div class="pre-footer-box">
-          <h3>System</h3>
-          <span class="bar red"></span>
-          <ul>
-            <li>Browser</li>
-            <li>OS</li>
-            <li>More</li>
-          </ul>
+          <h3 class="pre-footer system">System</h3>
+          <p>Browser</p>
+          <p>OS</p>
+          <p>More</p>
         </div>
         <div class="pre-footer-box">
-          <h3>Target</h3>
-          <span class="bar yellow"></span>
-          <ul>
-            <li>Users</li>
-            <li>Active</li>
-            <li>Geo</li>
-            <li>Interests</li>
-          </ul>
+          <h3 class="pre-footer target">Target</h3>
+          <p>Users</p>
+          <p>Active</p>
+          <p>Geo</p>
+          <p>Interests</p>
         </div>
       </div>
 
       <footer>
-        <h2>Footer</h2>
+        <h3>FOOTER</h3>
         <span
-          >Powered By
+          >Powered by
           <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></span
         >
       </footer>
     </div>
 
-    <script
-      src="https://kit.fontawesome.com/ccdc00d7bd.js "
-      crossorigin="anonymous "
-    ></script>
+    <script src="https://kit.fontawesome.com/ccdc00d7bd.js "></script>
   </body>
 </html>
